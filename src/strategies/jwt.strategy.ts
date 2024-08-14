@@ -13,6 +13,7 @@ export class JwtStrategy extends PassportStrategy(Strategy, 'jwt') {
       ignoreExpiration: false,
       secretOrKey: configService.accessSecretKey,
     });
+    console.log('configService.accessSecretKey', configService.accessSecretKey);
   }
 
   async validate(payload: Payload) {
